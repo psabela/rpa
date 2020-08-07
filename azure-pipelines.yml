@@ -1,9 +1,8 @@
-# Starter pipeline
+- task: UiPathInstallPlatform-preview@2
 - task: UiPathPack@2
   inputs:
-    versionType: AutoVersion  
-    version: '1.0.0' # Required when versionType == ManualVersion
-    projectJsonPath: '$(Build.SourcesDirectory)\HelloWorld'
+    versionType: 'AutoVersion'
+    projectJsonPath: 'HelloWorld'
+    outputType: 'Process'
+    orchestratorConnection: 'myuipath'
     outputPath: '$(Build.ArtifactStagingDirectory)\Packages\HelloWorld'
-    outputType: 'None' # Options: Process, Library, Tests, Objects, None
-    orchestratorConnection: 'service-connection-name' # Service connection to UiPath Orchestrator
