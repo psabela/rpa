@@ -3,7 +3,7 @@
   displayName: 'Install platform to cache internal tool'
 - task: UiPathPack@2
   inputs:
-    versionType: AutoVersion # Options: AutoVersion, CurrentVersion, ManualVersion 
+    versionType: AutoVersion 
     version: '1.0.0' # Required when versionType == ManualVersion
     projectJsonPath: '$(Build.SourcesDirectory)\HelloWorld'
     outputPath: '$(Build.ArtifactStagingDirectory)\Packages\HelloWorld'
