@@ -1,6 +1,4 @@
 # Starter pipeline
-- task: UiPathInstallPlatform-preview@2
-  displayName: 'Install platform to cache internal tool'
 - task: UiPathPack@2
   inputs:
     versionType: AutoVersion  
