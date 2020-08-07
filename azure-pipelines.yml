@@ -5,7 +5,7 @@
   inputs:
     versionType: AutoVersion  
     version: '1.0.0' # Required when versionType == ManualVersion
-    projectJsonPath: '$(Build.SourcesDirectory)\MyFirstProcess'
-    outputPath: '$(Build.ArtifactStagingDirectory)\Packages\MyFirstProcess'
+    projectJsonPath: '$(Build.SourcesDirectory)\HelloWorld'
+    outputPath: '$(Build.ArtifactStagingDirectory)\Packages\HelloWorld'
     outputType: 'None' # Options: Process, Library, Tests, Objects, None
     orchestratorConnection: 'service-connection-name' # Service connection to UiPath Orchestrator
