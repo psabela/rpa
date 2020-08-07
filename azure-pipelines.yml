@@ -1,14 +1,14 @@
 # Starter pipeline
+- task: UiPathInstallPlatform-preview@2
+  displayName: 'Install platform to cache internal tool'
 - task: UiPathPack@2
   inputs:
-    versionType: 'CurrentVersion'
+    versionType: AutoVersion # Options: AutoVersion, CurrentVersion, ManualVersion 
+    version: '1.0.0' # Required when versionType == ManualVersion
     projectJsonPath: '$(Build.SourcesDirectory)\HelloWorld'
-    outputType: 'Process'
-    orchestratorConnection: 'myuipath'
     outputPath: '$(Build.ArtifactStagingDirectory)\Packages\HelloWorld'
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
+    outputType: 'None' # Options: Process, Library, Tests, Objects, None
+    orchestratorConnection: 'service-connection-name' # Service connection to UiPath Orchestrator
 
 trigger:
 - master
