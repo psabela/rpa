@@ -3,24 +3,9 @@
   displayName: 'Install platform to cache internal tool'
 - task: UiPathPack@2
   inputs:
-    versionType: AutoVersion 
+    versionType: AutoVersion  
     version: '1.0.0' # Required when versionType == ManualVersion
-    projectJsonPath: '$(Build.SourcesDirectory)\HelloWorld'
-    outputPath: '$(Build.ArtifactStagingDirectory)\Packages\HelloWorld'
+    projectJsonPath: '$(Build.SourcesDirectory)\MyFirstProcess'
+    outputPath: '$(Build.ArtifactStagingDirectory)\Packages\MyFirstProcess'
     outputType: 'None' # Options: Process, Library, Tests, Objects, None
     orchestratorConnection: 'service-connection-name' # Service connection to UiPath Orchestrator
-
-trigger:
-- master
-
-pool:
-  vmImage: 'ubuntu-latest'
-
-steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
